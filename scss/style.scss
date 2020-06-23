@@ -161,9 +161,7 @@ section {
 }
 
 p {
-    font-family: 'Gilroy-Medium', sans-serif;
-    font-style: normal;
-    font-weight: 500;
+    font-family: 'Gilroy', sans-serif;
     font-size: 20px;
     line-height: 1.2;
     display: -webkit-box;
@@ -322,8 +320,8 @@ a.m-btn, button.m-btn {
         display: flex;
         a {
             width: 30%;
-            margin-right: 30px;
-            max-width: 180px;
+            margin-right: 8px;
+            max-width: 135px;
             img {
                 width: 100%;
             }
@@ -408,32 +406,49 @@ a.m-btn, button.m-btn {
 }
 
 footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-shadow: 0px -1px 0px rgba(0, 0, 0, 0.08);
+    box-shadow: 0px -1px 0px rgba(0, 0, 0, 0.08);
+    padding: 20px 0;
     .content {
         width: 90%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
         max-width: 1120px;
         margin: auto;
-        padding: 30px 0;
-
-        .m-navbar {
-            margin-bottom: 30px;
-            width: 100%;
-        }
+        padding: 10px 0;
 
         .link-box a {
-            margin-right: 16px;
+            margin-right: 8px;
+            &:nth-last-child(1) {
+                margin-right: 0;
+            }
         }
+    }
 
-        .footer-bottom {
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            -webkit-box-pack: justify;
-            -ms-flex-pack: justify;
-            justify-content: space-between;
-            -webkit-box-align: start;
-            -ms-flex-align: start;
-            align-items: flex-start;
+    .soc-box {
+        a {
+            margin-right: 30px;
         }
+    }
+
+    .corp {
+        font-family: 'Gilroy-Medium', sans-serif;
+        font-size: 20px;
+        line-height: 24px;
+        text-align: right;
+        letter-spacing: 0.15px;
+        color: #000000;
     }
 }
 
@@ -1070,66 +1085,6 @@ footer {
     p {
         font-size: 14px;
     }
-
-    footer .content .text-link {
-        width: auto;
-        display: block;
-        text-align: center;
-        font-size: 20px;
-    }
-
-    .main-page .img-block img {
-        width: 100%;
-    }
-
-    footer .content .m-navbar {
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        height: auto;
-
-        .navbar-brand {
-            width: auto;
-        }
-
-        .nav-item {
-            margin-left: 0;
-
-            a {
-                -webkit-box-pack: center;
-                -ms-flex-pack: center;
-                justify-content: center;
-                text-align: center;
-            }
-        }
-    }
-
-    footer .link-box {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-    }
-
-    footer .content .footer-bottom {
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-
-        a.m-btn {
-            margin-top: 20px;
-        }
-    }
 }
 
 @media (max-width: 768px) {
@@ -1182,6 +1137,37 @@ footer {
 
         a {
             margin-right: 0;
+        }
+    }
+
+    footer .content {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+
+        .soc-box {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-pack: distribute;
+            justify-content: space-around;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            width: 250px;
+            margin: 20px auto;
+            a {
+                margin-right: 0;
+            }
+        }
+
+        .corp {
+            text-align: center;
+            font-size: 14px;
         }
     }
 
