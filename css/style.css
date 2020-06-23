@@ -247,7 +247,7 @@ a.m-btn, button.m-btn {
   width: 90%;
   max-width: 1120px; }
   .main-page .text-block {
-    width: 70%; }
+    width: 60%; }
   .main-page .img-block {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -259,9 +259,9 @@ a.m-btn, button.m-btn {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    width: 30%; }
+    width: 40%; }
     .main-page .img-block img {
-      width: 130%; }
+      width: 100%; }
   .main-page h2 {
     font-family: 'Gilroy', sans-serif;
     font-style: normal;
