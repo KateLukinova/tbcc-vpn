@@ -13,6 +13,17 @@ $( document ).ready(function() {
     $(".collapse-button").click(function () {
         $(this).toggleClass('show')
         $('.collapse-content').slideToggle()
-
     });
+
+    $(".select").click(function () {
+        $(this).find('.selected').toggleClass('show')
+        $('.select-ul').slideToggle()
+    });
+
+    $(".select-item").click(function () {
+        $('#selected-img').attr('src', $(this).find('img').first().attr('src'));
+        $('#selected-value').text($(this).find('div').first().text());
+    });
+
+
 });

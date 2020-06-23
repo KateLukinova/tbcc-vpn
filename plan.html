@@ -8,12 +8,13 @@
     <link rel="stylesheet" href="css/aos.css">
     <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/style.css">
+
     <title>Plan</title>
   </head>
 <body>
     <header class="container-fluid p-0">
         <nav class="navbar navbar-expand-lg navbar-light m-navbar">
-            <a class="navbar-brand logo" href="#">
+            <a class="navbar-brand logo" href="index.html">
                 <img src="img/logo.svg" alt="">
             </a>
             <div class="header-col">
@@ -133,15 +134,30 @@
                 <div class="collapse-button">
                     <img src="img/arrow-down.svg" alt="">
                 </div>
-                <select name="" id="select-coin" class="select-coin">
-                    <option value="bnb" selected>BNB</option>
-                    <option value="bnb">BNB</option>
-                </select>
+                <div class="select">
+                    <img src="img/select-arrow.svg" alt="" class="select-arrow">
+                    <div class="selected show">
+                        <div class="select-item">
+                            <img src="img/1.svg" alt="" id="selected-img">
+                            <div class="select-value" id="selected-value">BNB</div>
+                        </div>
+                    </div>
+                    <div class="select-ul">
+                        <div class="select-item">
+                            <img src="img/1.svg" alt="">
+                            <div class="select-value">BNB</div>
+                        </div>
+                        <div class="select-item">
+                            <img src="img/2.svg" alt="">
+                            <div class="select-value">TBC soon</div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="collapse-content">
                 <p>Continue below to buy a VPN subscription with BNB</p>
                 <img src="img/qr.png" alt="">
-                <p class="qr-text-code">bnb1e9qyzq0zgveyazwvlv00ld8xk8kmv37c6n8gsk</p>
+                <div class="qr-text-code">bnb1e9qyzq0zgveyazwvlv00ld8xk8kmv37c6n8gsk</div>
                 <div class="order-total">Order Total: <span>6,15 BNB</span></div>
             </div>
         </div>
@@ -185,7 +201,7 @@
                         <img src="img/android.svg" alt="">
                     </a>
                 </div>
-                <a href="#" class="btn">Get vpn plan</a>
+                <a href="#" class="m-btn">Get vpn plan</a>
             </div>            
         </div>
     </footer>
@@ -193,7 +209,6 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/aos.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/datepicker.js"></script>
     <script src="js/scripts.js"></script>
   </body>
 </html>

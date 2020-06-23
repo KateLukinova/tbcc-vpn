@@ -31,6 +31,11 @@
     font-weight: bold;
     font-style: normal;
 }
+
+@font-face {
+    font-family: 'Gilroy-Medium';
+    src: url('../fonts/Gilroy-Medium.ttf');
+}
 /*reset css*/
 
 html, body, div, span, applet, object, iframe,
@@ -156,7 +161,7 @@ section {
 }
 
 p {
-    font-family: 'Gilroy', sans-serif;
+    font-family: 'Gilroy-Medium', sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 20px;
@@ -170,7 +175,7 @@ p {
     color: #000000;
 }
 
-a.btn, button.btn {
+a.m-btn, button.m-btn {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -182,13 +187,13 @@ a.btn, button.btn {
     align-items: center;
     width: 270px;
     height: 50px;
-    background: -webkit-gradient(linear, left top, right top, color-stop(-4.55%, #30AD8E), color-stop(104.55%, #6ADFBE));
     background: -o-linear-gradient(left, #30AD8E -4.55%, #6ADFBE 104.55%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(-4.55%, #30AD8E), color-stop(104.55%, #6ADFBE));
     background: linear-gradient(90deg, #30AD8E -4.55%, #6ADFBE 104.55%);
     -webkit-box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.06);
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.06);
     border-radius: 60px;
-    font-family: 'Gilroy', sans-serif;
+    font-family: 'Gilroy-Medium', sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
@@ -379,7 +384,7 @@ a.btn, button.btn {
             border: none;
             h5 {
                 .btn-link {
-                    font-family: 'Gilroy', sans-serif;
+                    font-family: 'Gilroy-Medium', sans-serif;
                     font-style: normal;
                     font-weight: 500;
                     font-size: 24px;
@@ -455,7 +460,7 @@ footer {
         align-items: flex-start;
         margin: auto;
         margin-bottom: 15px;
-        font-family: 'Gilroy', sans-serif;
+        font-family: 'Gilroy-Medium', sans-serif;
         font-style: normal;
         font-weight: 500;
         font-size: 16px;
@@ -584,7 +589,7 @@ footer {
                 }
 
                 span {
-                    font-family: 'Gilroy', sans-serif;
+                    font-family: 'Gilroy-Medium', sans-serif;
                     font-style: normal;
                     font-weight: 500;
                     font-size: 18px;
@@ -606,7 +611,7 @@ footer {
                 height: 56px;
                 border-radius: 60px;
                 border: 1px solid #30AD8E;
-                font-family: 'Gilroy', sans-serif;
+                font-family: 'Gilroy-Medium', sans-serif;
                 font-style: normal;
                 font-weight: 500;
                 font-size: 16px;
@@ -695,8 +700,8 @@ footer {
                 z-index: -1;
                 margin: -5px;
                 border-radius: inherit;
-                background: -webkit-gradient(linear, left top, right top, from(#30AD8E), to(#6ADFBE));
                 background: -o-linear-gradient(left, #30AD8E, #6ADFBE);
+                background: -webkit-gradient(linear, left top, right top, from(#30AD8E), to(#6ADFBE));
                 background: linear-gradient(to right, #30AD8E, #6ADFBE);
                 -webkit-transition: all 0.5s ease;
                 -o-transition: all 0.5s ease;
@@ -853,13 +858,14 @@ footer {
             line-height: 1.5;
             letter-spacing: 0.15px;
             color: rgba(0, 0, 0, 0.87);
+        }
 
-            &.qr-text-code {
-                font-weight: 500;
-                max-width: 100%;
-                overflow-x: scroll;
-                padding-right: 5px;
-            }
+        .qr-text-code {
+            font-family: 'Gilroy-Medium', sans-serif;
+            font-weight: 500;
+            max-width: 100%;
+            padding-right: 5px;
+            margin-bottom: 8px;
         }
 
         .order-total {
@@ -874,6 +880,52 @@ footer {
             }
         }
     }
+}
+
+.select {
+    position: relative;
+    width: auto;
+    min-width: 105px;
+    min-height: 32px;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-radius: 8px;
+    padding: 4px 12px;
+    padding-right: 20px;
+}
+
+.select-ul {
+    display: none;
+}
+
+.select-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 5px 0;
+    img {
+        margin-right: 6px;
+    }
+}
+
+.selected {
+    display: none;
+    &.show {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+    .select-item {
+        margin-right: 10px;
+    }
+}
+
+.select-arrow {
+    position: absolute;
+    right: 10px;
+    top: 18px;
 }
 
 @media (max-width: 1200px) {
@@ -1074,7 +1126,7 @@ footer {
         -ms-flex-align: center;
         align-items: center;
 
-        a.btn {
+        a.m-btn {
             margin-top: 20px;
         }
     }
@@ -1156,5 +1208,9 @@ footer {
         h2 {
             font-size: 16px;
         }
+    }
+
+    .collapse-box .collapse-content .qr-text-code {
+        overflow-x: scroll;
     }
 }
